@@ -6,8 +6,8 @@
     <style>
         body {
             font-family: 'Quicksand', sans-serif;
-            background-color: #FAF3DD; /* Light pastel background */
-            color: #333; /* Darker text for better readability */
+            background-color: #FAF3DD; 
+            color: #333; 
             margin: 0;
             padding: 0;
         }
@@ -20,13 +20,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: -10px -10px 20px -10px; /* Adjusted to add some space below the header */
+            margin: -10px -10px 20px -10px;
             color: #000; 
+        }
+
+        .cover-image {
+            max-width: 100%; 
+            height: auto;
+            display: block; 
+            margin: 0 auto; 
         }
 
         h1 {
             text-align: center;
-            color: #6D597A; /* Pastel purple for headings */
+            color: #6D597A; 
         }
 
         .button-container {
@@ -39,27 +46,29 @@
             display: inline-block;
             padding: 10px 20px;
             margin: 10px;
-            background-color: #E0BBE4; /* Pastel button background */
-            color: #333; /* Text color for buttons */
+            background-color: #E0BBE4; 
+            color: #333; 
             text-decoration: none; 
-            border: none; /* Removed border for a softer look */
-            border-radius: 20px; /* Rounded corners for buttons */
+            border: none;
+            border-radius: 20px; 
             cursor: pointer;
-            transition: background-color 0.3s; /* Smooth transition for hover effect */
+            transition: background-color 0.3s; 
         }
 
         .button:hover {
-            background-color: #957DAD; /* Darker shade for hover */
+            background-color: #957DAD; 
         }
 
         p {
             text-align: center;
-            margin: 20px 0; /* Added some spacing around the paragraph */
+            margin: 20px 0; 
         }
     </style>
 </head>
 <body>
-    <div class="background-image-p"></div>
+    <div class="background-image-p">
+        <img src="happy_marsh.jpg" alt="Happy Marshmallow" class="cover-image">
+    </div>
     <h1>Mellow Mallow</h1>
     <p>Here are some tips to make you feel well:</p>
     <div class="button-container">

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Breathing Techniques</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            background-color: #f0f8ff;
+        }
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: #add8e6;
+            border-radius: 50%;
+            animation: breatheAnimation 20s infinite;
+        }
+        @keyframes breatheAnimation {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.5); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.5); }
+        }
+        p {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="circle"></div>
+<p>Inhale as the circle expands, hold briefly, then exhale as it shrinks.</p>
+
+</body>
+</html>

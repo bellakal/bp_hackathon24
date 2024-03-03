@@ -1,3 +1,32 @@
 h1 {
-    color: green;
+    background-color: grey;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-family:helvetica;
+}
+p {
+    font-family: helvetica;
+    padding: 5px;
+}
+.button-container {
+    font-family: helvetica;
+    color: white;
+    /* display: flex; */
+    justify-content: center;
+    flex-direction: row;
+    margin: 5px;
+}
+
+#breathing {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: grey;
+}
+#habits {
+    padding: 10px;
+    background-color: grey;
+    border-radius: 10px;
+    margin: 5px;
 }

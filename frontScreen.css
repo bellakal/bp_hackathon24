@@ -3,36 +3,31 @@ h1 {
     padding: 10px;
     border-radius: 10px;
     color: white;
-    font-family:helvetica;
+    font-family: helvetica;
 }
+
 p {
     font-family: helvetica;
     padding: 5px;
 }
+
 .button-container {
     font-family: helvetica;
     color: white;
-    /* display: flex; */
     justify-content: center;
     flex-direction: row;
     margin: 5px;
 }
 
-#breathing {
+#breathing, #habits {
     padding: 10px;
-    border-radius: 10px;
-    margin: 5px;
     background-color: rgb(138, 204, 235);
-}
-
-#habits {
-    padding: 10px;
-    background-color: rgb(138,204,235);
     border-radius: 10px;
     margin: 5px;
+    cursor: pointer; /* Makes it clear it's clickable */
+    transition: background-color 0.3s; /* Smooth transition for the background color */
 }
 
-#breathing:hover::after {
-        background-color: #b8e8f3;
-        cursor: pointer;
+#breathing:hover, #habits:hover {
+    background-color: rgb(118, 184, 215); /* Dimmer/darker shade when hovered */
 }

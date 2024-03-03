@@ -33,5 +33,5 @@ p {
 }
 
 #breathing:hover::after {
-    content: "View our breathing techniques.";
+    color:pink;
 }

@@ -33,5 +33,6 @@ p {
 }
 
 #breathing:hover::after {
-    color:pink;
+        background-color: #b8e8f3;
+        cursor: pointer;
 }

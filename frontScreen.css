@@ -19,6 +19,11 @@ p {
     margin: 5px;
 }
 
+.title{
+    position: center;
+    text-align: center
+}
+
 #breathing, #habits {
     padding: 10px;
     background-color: rgb(138, 204, 235);
@@ -35,3 +40,6 @@ p {
 body {
     font-family: 'Quicksand', sans-serif;
 }
+
+
+

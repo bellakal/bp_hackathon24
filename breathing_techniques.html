@@ -4,6 +4,10 @@
 <a href="frontScreen.html" class="button" id="back-button"><=</a>
 
 <head>
+    <div class="marshmallow">
+        <div id="marshmallow_breathe_in"><img src="images/breathe_in.jpg" alt = "Breathe in" height = 100px></div>
+        <div id="marshmallow_breathe_out"><img src="images/breathe_out.jpg" alt = "Breathe out" height = 100px></div>
+    </div>
     <meta charset="UTF-8">
     <title>Breathing Techniques</title>
     <style>
@@ -15,18 +19,30 @@
             flex-direction: column;
             background-color: #f0f8ff;
         }
-        .circle {
-            width: 100px;
-            height: 100px;
+        .marshmallow {
+            width: 10px;
+            height: 10px;
             background-color: #add8e6;
             border-radius: 50%;
             animation: breatheAnimation 20s infinite;
         }
         @keyframes breatheAnimation {
-            0%, 100% { transform: scale(1); }
-            25% { transform: scale(1.5); }
-            50% { transform: scale(1); }
-            75% { transform: scale(1.5); }
+            0%, 100% { 
+                background-image: "marshmallow_breathe_in";
+                transform: scale(1); 
+            }
+            25% {
+                background-image: "marshmallow_breathe_in";
+                transform: scale(1.5);
+            }
+            50% {
+                background-image: "marshmallow_breathe_out";
+                transform: scale(1);
+            }
+            75% {
+                background-image: "marshmallow_breathe_out";
+                transform: scale(1.5);
+            }
         }
         p {
             margin-top: 20px;

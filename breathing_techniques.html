@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<div class="back-button"><=</div>
+
 <head>
     <meta charset="UTF-8">
     <title>Breathing Techniques</title>
@@ -29,6 +31,25 @@
             margin-top: 20px;
             text-align: center;
             font-size: 1.2em;
+            padding: 30px;
+        }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 10px;
+            margin: 7px 10px;
+            border-radius: 50%;
+            width:40px;
+            height:40px;
+            color: gray;
+            background-color: #DDDDF0;
+            padding:10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .back-button:hover {
+            background-color: #D0D0F0;
         }
     </style>
 </head>
@@ -36,6 +57,5 @@
 
 <div class="circle"></div>
 <p>Inhale as the circle expands, hold briefly, then exhale as it shrinks.</p>
-
 </body>
 </html>

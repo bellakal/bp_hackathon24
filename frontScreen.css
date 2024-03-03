@@ -24,10 +24,15 @@ p {
     background-color: rgb(138, 204, 235);
     border-radius: 10px;
     margin: 5px;
-    cursor: pointer; /* Makes it clear it's clickable */
-    transition: background-color 0.3s; /* Smooth transition for the background color */
+    cursor: pointer; 
+    transition: background-color 0.3s;
 }
 
 #breathing:hover, #habits:hover {
-    background-color: rgb(118, 184, 215); /* Dimmer/darker shade when hovered */
+    background-color: rgb(118, 184, 215); 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+body {
+    font-family: 'Quicksand', sans-serif;
 }

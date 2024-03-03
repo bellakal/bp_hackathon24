@@ -16,8 +16,8 @@
         }
         .marshmallow {
             position: relative;
-            width: 150px; /* Adjusted size */
-            height: 150px; /* Adjusted size */
+            width: 100px; /* Adjust if necessary */
+            height: 100px; /* Adjust if necessary */
             margin-bottom: 20px; /* Space below the images */
         }
         .marshmallow img {
@@ -26,11 +26,16 @@
             position: absolute;
             top: 0;
             left: 0;
-            transition: opacity 2s ease-in-out;
-            opacity: 0;
+            transition: opacity 3s ease-in-out, transform 4s ease-in-out; /* Animate both opacity and transform */
+            opacity: 0; /* Start fully transparent */
         }
-        .marshmallow img.show {
+        .marshmallow img.grow {
             opacity: 1;
+            transform: scale(1.6); /* Grow in size */
+        }
+        .marshmallow img.shrink {
+            opacity: 1;
+            transform: scale(0.8); /* Shrink in size */
         }
         #back-button {
             position: fixed;
@@ -57,26 +62,36 @@
 <body>
 <a href="frontScreen.html" class="button" id="back-button">&#x3C;=</a>
 <div class="marshmallow">
-    <img src="images/breathe_in.jpg" alt="Breathe in" id="breatheIn" class="show">
-    <img src="images/breathe_out.jpg" alt="Breathe out" id="breatheOut">
+    <img src="images/breathe_in.jpg" alt="Breathe in" id="breatheIn" class="grow">
+    <img src="images/breathe_out.jpg" alt="Breathe out" id="breatheOut" style="opacity: 0; transform: scale(0.8);">
 </div>
-<p>Inhale as the image fades in, hold briefly, then exhale as it fades to the next.</p>
+<p>Inhale as the marshmallow grows and fades. Exhale when the image shows him breathing out.</p>
 
 <script>
     const breatheIn = document.getElementById('breatheIn');
     const breatheOut = document.getElementById('breatheOut');
-    let isBreatheIn = true;
 
-    setInterval(() => {
-        if (isBreatheIn) {
-            breatheIn.classList.remove('show');
-            breatheOut.classList.add('show');
+    function toggleBreathing() {
+        if (breatheIn.classList.contains('grow')) {
+            breatheIn.classList.remove('grow');
+            breatheIn.style.opacity = '0';
+            breatheOut.classList.add('shrink');
+            breatheOut.style.opacity = '1';
         } else {
-            breatheOut.classList.remove('show');
-            breatheIn.classList.add('show');
+            breatheOut.classList.remove('shrink');
+            breatheOut.style.opacity = '0';
+            breatheIn.classList.add('grow');
+            breatheIn.style.opacity = '1';
         }
-        isBreatheIn = !isBreatheIn;
-    }, 4000); // Change 4000 (4 seconds) to adjust the duration of each phase
+    }
+
+    // Initial state
+    breatheIn.classList.add('grow');
+    breatheIn.style.opacity = '1';
+    breatheOut.style.opacity = '0';
+
+    setInterval(toggleBreathing, 4000); // Adjust time here to make the transition faster or slower
 </script>
 </body>
 </html>
+

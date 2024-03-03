@@ -1,5 +1,5 @@
 h1 {
-    background-color: grey;
+    background-color: rgb(226, 151, 213);
     padding: 10px;
     border-radius: 10px;
     color: white;
@@ -22,12 +22,12 @@ p {
     padding: 10px;
     border-radius: 10px;
     margin: 5px;
-    background-color: grey;
+    background-color: rgb(138, 204, 235);
 }
 
 #habits {
     padding: 10px;
-    background-color: grey;
+    background-color: rgb(138,204,235);
     border-radius: 10px;
     margin: 5px;
 }

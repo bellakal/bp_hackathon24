@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<a href="frontScreen.html" class="button" id="back-button"><=</a>
-
 <head>
-    <div class="marshmallow">
-        <div id="marshmallow_breathe_in"><img src="images/breathe_in.jpg" alt = "Breathe in" height = 100px></div>
-        <div id="marshmallow_breathe_out"><img src="images/breathe_out.jpg" alt = "Breathe out" height = 100px></div>
-    </div>
     <meta charset="UTF-8">
     <title>Breathing Techniques</title>
     <style>
@@ -18,63 +11,72 @@
             height: 100vh;
             flex-direction: column;
             background-color: #f0f8ff;
+            margin: 0; /* Reset default margin */
+            padding: 0; /* Reset default padding */
         }
         .marshmallow {
-            width: 10px;
-            height: 10px;
-            background-color: #add8e6;
-            border-radius: 50%;
-            animation: breatheAnimation 20s infinite;
+            position: relative;
+            width: 150px; /* Adjusted size */
+            height: 150px; /* Adjusted size */
+            margin-bottom: 20px; /* Space below the images */
         }
-        @keyframes breatheAnimation {
-            0%, 100% { 
-                background-image: "marshmallow_breathe_in";
-                transform: scale(1); 
-            }
-            25% {
-                background-image: "marshmallow_breathe_in";
-                transform: scale(1.5);
-            }
-            50% {
-                background-image: "marshmallow_breathe_out";
-                transform: scale(1);
-            }
-            75% {
-                background-image: "marshmallow_breathe_out";
-                transform: scale(1.5);
-            }
+        .marshmallow img {
+            width: 100%; /* Make image fill the container */
+            height: auto; /* Maintain aspect ratio */
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 2s ease-in-out;
+            opacity: 0;
         }
-        p {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 1.2em;
-            padding: 30px;
+        .marshmallow img.show {
+            opacity: 1;
         }
         #back-button {
             position: fixed;
             top: 20px;
-            left: 10px;
-            margin: 7px 10px;
+            left: 20px;
+            padding: 10px;
             border-radius: 50%;
-            width:40px;
-            height:40px;
-            color: gray;
-            background-color: #DDDDF0;
-            padding:10px;
+            background-color: #ddd;
+            color: #333;
+            text-decoration: none;
             display: flex;
             justify-content: center;
             align-items: center;
-            text-decoration: none; /* Remove underline from links */
-            cursor: pointer;
         }
         #back-button:hover {
-            background-color: #D0D0F0;
+            background-color: #ccc;
+        }
+        p {
+            text-align: center;
+            margin: 0 20px; /* Ensure text does not touch the edges */
         }
     </style>
 </head>
 <body>
+<a href="frontScreen.html" class="button" id="back-button">&#x3C;=</a>
+<div class="marshmallow">
+    <img src="images/breathe_in.jpg" alt="Breathe in" id="breatheIn" class="show">
+    <img src="images/breathe_out.jpg" alt="Breathe out" id="breatheOut">
+</div>
+<p>Inhale as the image fades in, hold briefly, then exhale as it fades to the next.</p>
 
-<div class="circle"></div>
-<p>Inhale as the circle expands, hold briefly, then exhale as it shrinks.</p>
+<script>
+    const breatheIn = document.getElementById('breatheIn');
+    const breatheOut = document.getElementById('breatheOut');
+    let isBreatheIn = true;
+
+    setInterval(() => {
+        if (isBreatheIn) {
+            breatheIn.classList.remove('show');
+            breatheOut.classList.add('show');
+        } else {
+            breatheOut.classList.remove('show');
+            breatheIn.classList.add('show');
+        }
+        isBreatheIn = !isBreatheIn;
+    }, 4000); // Change 4000 (4 seconds) to adjust the duration of each phase
+</script>
 </body>
 </html>

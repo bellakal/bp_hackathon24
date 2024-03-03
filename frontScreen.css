@@ -24,9 +24,14 @@ p {
     margin: 5px;
     background-color: grey;
 }
+
 #habits {
     padding: 10px;
     background-color: grey;
     border-radius: 10px;
     margin: 5px;
+}
+
+#breathing:hover::after {
+    content: "View our breathing techniques.";
 }

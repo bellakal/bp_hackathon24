@@ -43,5 +43,16 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #FAF3DD; 
+    color: #333; 
+    margin: 0;
+    padding: 0;
+    position: relative; /* Add this line */
+    min-height: 100vh; /* Ensure body takes minimum full viewport height */
+}
+        
+
 
 

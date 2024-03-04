@@ -1,46 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Habits and How to Keep it Up</title>
-    <link rel="stylesheet" type="text/css" href="index.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Quicksand', sans-serif;
-            background-color: #F3E9DD; /* Soft pastel background */
+            background-color: #F3E9DD;
             color: #333;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             text-align: center;
         }
         h1, h2 {
-            color: #6D6875; /* Pastel text color */
+            color: #6D6875;
         }
-        h3 {
-            color: #B5838D; /* Slightly darker pastel for contrast */
-        }
-        p, h1, h2, h3 {
+        h3, .habit-info {
+            cursor: pointer;
+            color: #B5838D;
             margin: 20px auto;
-            padding: 0 10px;
         }
-<<<<<<< HEAD
+        .habit-info {
+            display: none;
+            color: #333;
+        }
         #back-button {
->>>>>>> a6f6e6abc0c84ed61681a757a7f9b3cccbe2ef62
-=======
-        p {
-            padding: 30px;
-            color: black;
-        }
-        h1 {
-            font-family: paytone_one;
-            text-align: center; 
-        }
-    </style>
-</body>
-
-    <style>
-        #back-button {
->>>>>>> f352595c55a78a0eb906b94176d7771609a1324f
             position: fixed;
             top: 20px;
             left: 10px;
@@ -48,40 +34,63 @@
             border-radius: 50%;
             width: 40px;
             height: 40px;
-            color: #6D6875; 
-            background-color: #E5989B; 
+            color: #6D6875;
+            background-color: #E5989B;
             padding: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
-            text-decoration: none; 
+            text-decoration: none;
             cursor: pointer;
-            font-size: 24px; 
+            font-size: 24px;
         }
         #back-button:hover {
-            background-color: #FFCDB2; 
+            background-color: #FFCDB2;
+        }
+        img {
+            width: 100px;
+            margin-top: 10px;
+        }
+        .habit {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #FFCDB2;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .habit:hover {
+            background-color: #E5989B;
         }
     </style>
+</head>
 <body>
-    <a href="frontScreen.html" class="button" id="back-button">&#x3C;</a>
+    <a href="frontScreen.html" id="back-button">&#x3C;</a>
     <h1>Good Habits and How to Keep Them Up</h1>
 
-    <h2>Good habits to keep up</h2>
+    <div class="habit" onclick="toggleInfo('morning-info')">
+        <h3>Establish a consistent morning schedule.</h3>
+        <p class="habit-info" id="morning-info">This means waking up at the same time every day, even on weekends.</p>
+    </div>
 
-    <h3>- Establish a consistent morning schedule.</h3>
-    <h3>- Maintain a balanced diet.</h3>
-    <h3>- Get a healthy amount of sleep.</h3>
-    <h3>- Go outdoors.</h3>
-    <h3>- Connect with other people.</h3>
+    <div class="habit" onclick="toggleInfo('diet-info')">
+        <h3>Maintain a balanced diet.</h3>
+        <p class="habit-info" id="diet-info">A balanced diet includes a variety of foods from all food groups.</p>
+    </div>
 
-    <h2>How to be Consistent with Habits</h2>
+    <!-- Add more habits here -->
 
-    <h3>- Create a specific goal.</h3>
-    <h3>- Keep a Balanced Diet.</h3>
-    <h3>- Get healthy amounts of sleep.</h3>
-    <h3>- Go outdoors.</h3>
-    <h3>- Connect with other people.</h3>
-    <img src="images/burntout_Marsh.jpg" alt="Burntout Marshmallow" height: 100px>
-    <img src="images/insomnia_marsh.jpg" alt="Insomniac Marshmallow" height: 100px>
+    <img src="images/burntout_Marsh.jpg" alt="Burntout Marshmallow" width="100">
+    <img src="images/insomnia_marsh.jpg" alt="Insomniac Marshmallow" width="100">
+
+    <script>
+        function toggleInfo(id) {
+            var info = document.getElementById(id);
+            if (info.style.display === "none" || !info.style.display) {
+                info.style.display = "block";
+            } else {
+                info.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>

@@ -1,73 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>Mental Health</title>
     <style>
         body {
             font-family: 'Quicksand', sans-serif;
-            background-color: #FAF3DD; 
-            color: #333; 
+            background-color: #FAF3DD;
+            color: #333;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
         }
-        
+
         .background-image-p {
             background-image: url('https://www.creativefabrica.com/wp-content/uploads/2022/07/29/Cute-Flower-Pattern-in-Pastel-Colors-Graphics-35071650-1.jpeg');
-            background-size: cover; 
-            background-position: center; 
-            height: 200px; 
+            background-size: cover;
+            background-position: center;
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: -10px -10px 20px -10px;
-            color: #000; 
+            padding: 60px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         .cover-image {
-            max-width: 100%; 
+            max-width: 90%;
             height: auto;
-            display: block; 
-            margin: 0 auto; 
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
         h1 {
             text-align: center;
-            color: #6D597A; 
+            color: #6D597A;
+            margin: 20px 0 10px;
+        }
+
+        p {
+            text-align: center;
+            margin: 0 auto 20px;
+            max-width: 800px;
+            line-height: 1.6;
         }
 
         .button-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            margin-bottom: 20px;
         }
 
         .button {
-            display: inline-block;
-            padding: 10px 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
             margin: 10px;
-            background-color: #E0BBE4; 
-            color: #333; 
-            text-decoration: none; 
+            background-color: #E0BBE4;
+            color: #333;
+            text-decoration: none;
             border: none;
-            border-radius: 20px; 
+            border-radius: 30px;
             cursor: pointer;
-            transition: background-color 0.3s; 
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            font-weight: 500;
         }
 
         .button:hover {
-            background-color: #957DAD; 
-        }
-
-        p {
-            text-align: center;
-            margin: 20px 0; 
+            background-color: #CBA6C3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
         }
     </style>
 </head>
 <body>
     <div class="background-image-p">
-        <img src="images/dancing_marshs.jpg" alt="Happy Marshmallow" class="cover-image" height: 500px>
+        <img src="images/dancing_marshs.jpg" alt="Happy Marshmallow" class="cover-image">
     </div>
     <h1>Mellow Mallow</h1>
     <p>Here are some tips to make you feel well:</p>

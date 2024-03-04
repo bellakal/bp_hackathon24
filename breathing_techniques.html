@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700;800&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Breathing Techniques</title>
     <style>
         body {
             display: flex;
-            font-family: 'Quicksand';
+            font-family: 'Quicksand', sans-serif;
             justify-content: center;
             align-items: center;
             height: 100vh;
             flex-direction: column;
             background-color: #f0f8ff;
-            margin: 0; /* Reset default margin */
-            padding: 0; /* Reset default padding */
+            margin: 0; 
+            padding: 0; 
         }
         .marshmallow {
             position: relative;
-            width: 200px; /* Adjust if necessary */
-            height: 200px; /* Adjust if necessary */
-            margin-bottom: 20px; /* Space below the images */
+            width: 200px; 
+            height: 200px; 
+            margin-bottom: 20px; 
         }
         .marshmallow img {
-            width: 100%; /* Make image fill the container */
-            height: auto; /* Maintain aspect ratio */
+            width: 100%; 
+            height: auto; 
             position: absolute;
             top: 0;
             left: 0;
-            transition: opacity 3s ease-in-out, transform 4s ease-in-out; /* Animate both opacity and transform */
-            opacity: 0; /* Start fully transparent */
+            transition: opacity 3s ease-in-out, transform 4s ease-in-out; 
+            opacity: 0; 
         }
         .marshmallow img.grow {
             opacity: 1;
-            transform: scale(2.5); /* Grow in size */
+            transform: scale(2.5); 
         }
         .marshmallow img.shrink {
             opacity: 1;
-            transform: scale(1); /* Shrink in size */
+            transform: scale(1); 
         }
         #back-button {
             position: fixed;
@@ -53,7 +53,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            text-decoration: none; /* Remove underline from links */
+            text-decoration: none; 
             cursor: pointer;
         }
         #back-button:hover {
@@ -61,7 +61,11 @@
         }
         p {
             text-align: center;
-            margin: 0 20px; /* Ensure text does not touch the edges */
+            margin: 40px 20px; /* Increased padding around the text */
+            font-size: 20px; /* Increased font size for better readability */
+            font-weight: 800; /* Made the font bolder */
+            color: #333; /* More pronounced text color */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Subtle shadow for depth */
         }
     </style>
 </head>
@@ -71,7 +75,7 @@
     <img src="images/breathe_in.png" alt="Breathe in" id="breatheIn" class="grow">
     <img src="images/breathe_out.png" alt="Breathe out" id="breatheOut" style="opacity: 0; transform: scale(0.8);">
 </div>
-<p style="font-family: 'Quicksand'">Inhale as the marshmallow grows and fades. Exhale when the image shows him breathing out.</p>
+<p>Inhale as the marshmallow grows and fades. Exhale when the image shows him breathing out.</p>
 
 <script>
     const breatheIn = document.getElementById('breatheIn');
@@ -96,8 +100,7 @@
     breatheIn.style.opacity = '1';
     breatheOut.style.opacity = '0';
 
-    setInterval(toggleBreathing, 4000); // Adjust time here to make the transition faster or slower
+    setInterval(toggleBreathing, 5000);
 </script>
 </body>
 </html>
-
